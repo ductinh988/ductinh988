@@ -7,6 +7,7 @@
     <title>The band</title>
     <link rel="icon" href="./assets/favicon/icon dau trang.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/styte.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/fonts/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -19,7 +20,7 @@
                 <li><a href="#tour">Tour</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li>
-                    <a href="">
+                    <a href="#">
                         More
                      <i class="nav-arrow-dowr ti-angle-down"></i>
                     </a>
@@ -31,7 +32,11 @@
                 </li>
             </ul>
             <!-- end nav -->
-            <!-- begin search button -->
+            <!-- mobile menu button -->
+            <div id="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+                <!-- search button -->
+            </div>
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
@@ -220,7 +225,33 @@
         })
 
         // Call API xoa du lieu
-        
+    </script>
+    <script>
+        // get.. đi lấy header sử dụng js để lấy đc id của header
+        var header = document.getElementById('header');
+        var mobileMenu = document.getElementById('mobile-menu');
+        var headerclientHeight = header.clientHeight
+        // đóng mở mobile menu
+        mobileMenu.onclick = function() {
+            var isClosed = header.clientHeight === headerclientHeight;
+            // alert('thong bao!')
+            // console.log(header.clientHeight);
+            if (isClosed) {
+                header.style.height = 'auto'
+            } else {
+                header.style.height = '46px'
+            }
+        }
+        // tự động đóng khi chọn menu
+        var menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        // console.log(menuItems)
+        for (var i = 0; i < menuItems.length; i++) {
+            var menuItem = menuItems[i];
+            menuItem.onclick = function() {
+                // console.log(this)
+                header.style.height = null
+            }
+        }
     </script>
 </body>
 </html>

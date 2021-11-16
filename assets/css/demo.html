@@ -18,8 +18,28 @@
         .tablet,
         .mobile {
             font-size: 80px;
+            display: none;
         }
-        /* @media () */
+        /* break point */
+        @media (min-width:1024px) {
+            .pc {
+                display: block;
+            }
+        }
+        @media (min-width:740px) and (max-width: 1024px) {
+            .tablet {
+                display: block;
+            }
+        }
+        @media (max-width: 740px) {
+            .mobile {
+                display: block;
+            }
+        }
+       /* 
+       pc: >= 1024px
+       tablet: >=740px & < 1040px
+       mobile:<740px */
     </style>
 </head>
 <body>
