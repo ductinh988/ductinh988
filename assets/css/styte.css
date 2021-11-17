@@ -37,6 +37,7 @@ html {
     display: inline-block;
     margin-top: 15px;
     border: none;
+    /* text-align: center; */
 }
 .btn:hover {
     cursor: pointer;
@@ -48,6 +49,9 @@ html {
 }
 .mt-16 {
     margin-top: 16px;
+}
+.mt-32 {
+    margin-top: 32px;
 }
 .clear {
     clear: both;
@@ -88,7 +92,7 @@ html {
     height: 46px;
     background-color: #000;
     z-index: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
     /* position: fixed;
     top: 0;
     left: 0;
@@ -241,7 +245,7 @@ html {
     line-height: 1.4;
 }
 #content .members-list {
-    margin-top: 48px;
+    margin-top: 32px;
     /* giai quyeest flot */
     /* overflow: hidden; */
 }
@@ -297,7 +301,7 @@ html {
 /* place */
 .places-list {
     /* margin: 32px -8px 48px; */
-    margin-top: 32px;
+    margin-top: 16px;
     /* margin-bottom: 48px; */
     
 }
@@ -463,6 +467,13 @@ a {
 .contact-info i[class*="ti-"] {
     width: 30px;
     display: inline-block;
+}
+.contact-info a {
+    color: #101aef;
+    opacity: 0.8;
+}
+.contact-info a:hover {
+    opacity: 1;
 }
 /* .contact-form .form-submit-btn {
     font-size: 15px;
